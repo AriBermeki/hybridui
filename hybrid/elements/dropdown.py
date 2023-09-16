@@ -25,23 +25,23 @@ class DropDown(Element):
         onOpenChange=None
     ):
         super().__init__(component='DropDown')
-        self.props["arrow"] = arrow
-        self.props["autoAdjustOverflow"] = autoAdjustOverflow
-        self.props["autoFocus"] = autoFocus
-        self.props["disabled"] = disabled
-        self.props["destroyPopupOnHide"] = destroyPopupOnHide
-        self.props["dropdownRender"] = dropdownRender
-        self.props["getPopupContainer"] = getPopupContainer
-        self.props["menu"] = menu
-        self.props["overlayClassName"] = overlayClassName
-        self.props["overlayStyle"] = overlayStyle
-        self.props["placement"] = placement
-        self.props["trigger"] = trigger
-        self.props["open"] = open
-        self.props["onOpenChange"] = onOpenChange
+        self._props["arrow"] = arrow
+        self._props["autoAdjustOverflow"] = autoAdjustOverflow
+        self._props["autoFocus"] = autoFocus
+        self._props["disabled"] = disabled
+        self._props["destroyPopupOnHide"] = destroyPopupOnHide
+        self._props["dropdownRender"] = dropdownRender
+        self._props["getPopupContainer"] = getPopupContainer
+        self._props["menu"] = menu
+        self._props["overlayClassName"] = overlayClassName
+        self._props["overlayStyle"] = overlayStyle
+        self._props["placement"] = placement
+        self._props["trigger"] = trigger
+        self._props["open"] = open
+        self._props["onOpenChange"] = onOpenChange
         self.children= content
-        self.props["overlay"] = overlay
-        self.props["trigger"] = trigger
+        self._props["overlay"] = overlay
+        self._props["trigger"] = trigger
 
 class DropDownButton(Element):
     """
@@ -61,13 +61,13 @@ class DropDownButton(Element):
         type= None
     ):
         super().__init__(component='DropDownButton')
-        self.props["buttonsRender"] = buttonsRender
-        self.props["loading"] = loading
-        self.props["danger"] = danger
-        self.props["icon"] = icon
-        self.props["size"] = size
-        self.props["type"] = type
-        self.props["onClick"] = onClick
+        self._props["buttonsRender"] = buttonsRender
+        self._props["loading"] = loading
+        self._props["danger"] = danger
+        self._props["icon"] = icon
+        self._props["size"] = size
+        self._props["type"] = type
+        self._props["onClick"] = onClick
         self.children = content
-        self.props["overlay"] = overlay
-        self.props["trigger"] = trigger
+        self._props["overlay"] = overlay
+        self._props["trigger"] = trigger

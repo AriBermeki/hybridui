@@ -16,11 +16,11 @@ class ButtonRadio(Element):
     ):
         super().__init__(component='ButtonRadio')
         self.children = content
-        self.props["autoFocus"] = autoFocus
-        self.props["checked"] = checked
-        self.props["disabled"] = disabled
-        self.props["value"] = value
-        self.props["onChange"] = onChange
+        self._props["autoFocus"] = autoFocus
+        self._props["checked"] = checked
+        self._props["disabled"] = disabled
+        self._props["value"] = value
+        self._props["onChange"] = onChange
 
 
 
@@ -45,12 +45,12 @@ class RadioGroup(Element):
     ):
         super().__init__(component='RadioGroup')
         self.children = content
-        self.props["buttonStyle"] = buttonStyle
-        self.props["defaultValue"] = defaultValue
-        self.props["disabled"] = disabled
-        self.props["name"] = name
-        self.props["options"] = options
-        self.props["optionType"] = optionType
-        self.props["size"] = size
-        self.props["value"] = value
-        self.props["onChange"] = onChange
+        self._props["buttonStyle"] = buttonStyle
+        self._props["defaultValue"] = defaultValue
+        self._props["disabled"] = disabled
+        self._props["name"] = name
+        self._props["options"] = options
+        self._props["optionType"] = optionType
+        self._props["size"] = size
+        self._props["value"] = value
+        self._props["onChange"] = onChange

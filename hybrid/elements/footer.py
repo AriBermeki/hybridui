@@ -14,7 +14,7 @@ class Footer(Element):
 
     ):
         super().__init__(component='Footer')
-        self.props["style"] = style
-        self.props["className"] = className
-        self.props["hasSider"] = hasSider
+        self._props["style"] = style
+        self._props["className"] = className
+        self._props["hasSider"] = hasSider
         self.children = content

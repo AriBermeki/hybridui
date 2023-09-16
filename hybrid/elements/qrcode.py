@@ -16,9 +16,9 @@ class QRcode(Element):
     ):
         super().__init__(component='QRcode')
         self.children= content
-        self.props["value"] = value
-        self.props["size"] = size
-        self.props["bgColor"] = bgColor
-        self.props["fgColor"] = fgColor
-        self.props["level"] = level
-        self.props["includeMargin"] = includeMargin
+        self._props["value"] = value
+        self._props["size"] = size
+        self._props["bgColor"] = bgColor
+        self._props["fgColor"] = fgColor
+        self._props["level"] = level
+        self._props["includeMargin"] = includeMargin

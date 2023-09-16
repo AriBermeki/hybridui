@@ -98,46 +98,89 @@ class DatePicker(Element):
     ):
         super().__init__(component='DatePicker')
         self.children= content
-        self.props["value"] = value
-        self.props["onChange"] = onChange
-        self.props["allowClear"] = allowClear
-        self.props["autoFocus"] = autoFocus
-        self.props["bordered"] = bordered
-        self.props["className"] = className
-        self.props["dateRender"] = dateRender
-        self.props["changeOnBlur"] = changeOnBlur
-        self.props["cellRender"] = cellRender
-        self.props["disabled"] = disabled
-        self.props["disabledDate"] = disabledDate
-        self.props["popupClassName"] = popupClassName
-        self.props["getPopupContainer"] = getPopupContainer
-        self.props["inputReadOnly"] = inputReadOnly
-        self.props["locale"] = locale
-        self.props["mode"] = mode
-        self.props["nextIcon"] = nextIcon
-        self.props["open"] = open
-        self.props["panelRender"] = panelRender
-        self.props["picker"] = picker
-        self.props["placeholder"] = placeholder
-        self.props["placement"] = placement
-        self.props["popupStyle"] = popupStyle
-        self.props["presets"] = presets
-        self.props["prevIcon"] = prevIcon
-        self.props["size"] = size
-        self.props["status"] = status
-        self.props["style"] = style
-        self.props["suffixIcon"] = suffixIcon
-        self.props["superNextIcon"] = superNextIcon
-        self.props["superPrevIcon"] = superPrevIcon
-        self.props["onOpenChange"] = onOpenChange
-        self.props["onPanelChange"] = onPanelChange
-        self.props["defaultPickerValue"] = defaultPickerValue
-        self.props["defaultValue"] = defaultValue
-        self.props["disabledTime"] = disabledTime
-        self.props["format"] = format
-        self.props["renderExtraFooter"] = renderExtraFooter
-        self.props["showNow"] = showNow
-        self.props["showTime"] = showTime
-        self.props["showTime.defaultValue"] = showTimeDefaultValue
-        self.props["showToday"] = showToday
-        self.props["onOk"] = onOk
+        if value is not None:
+            self._props["value"] = value
+        if onChange is not None:
+            self._props["onChange"] = onChange
+        if allowClear is not None:
+            self._props["allowClear"] = allowClear
+        if autoFocus is not None:
+            self._props["autoFocus"] = autoFocus
+        if bordered is not None:
+            self._props["bordered"] = bordered
+        if className is not None:
+            self._props["className"] = className
+        if dateRender is not None:
+            self._props["dateRender"] = dateRender
+        if changeOnBlur is not None:
+            self._props["changeOnBlur"] = changeOnBlur
+        if cellRender is not None:
+            self._props["cellRender"] = cellRender
+        if disabled is not None:
+            self._props["disabled"] = disabled
+        if disabledDate is not None:
+            self._props["disabledDate"] = disabledDate
+        if popupClassName is not None:
+            self._props["popupClassName"] = popupClassName
+        if getPopupContainer is not None:
+            self._props["getPopupContainer"] = getPopupContainer
+        if inputReadOnly is not None:
+            self._props["inputReadOnly"] = inputReadOnly
+        if locale is not None:
+            self._props["locale"] = locale
+        if mode is not None:
+            self._props["mode"] = mode
+        if nextIcon is not None:
+            self._props["nextIcon"] = nextIcon
+        if open is not None:
+            self._props["open"] = open
+        if panelRender is not None:
+            self._props["panelRender"] = panelRender
+        if picker is not None:
+            self._props["picker"] = picker
+        if placeholder is not None:
+            self._props["placeholder"] = placeholder
+        if placement is not None:
+            self._props["placement"] = placement
+        if popupStyle is not None:
+            self._props["popupStyle"] = popupStyle
+        if presets is not None:
+            self._props["presets"] = presets
+        if prevIcon is not None:
+            self._props["prevIcon"] = prevIcon
+        if size is not None:
+            self._props["size"] = size
+        if status is not None:
+            self._props["status"] = status
+        if style is not None:
+            self._props["style"] = style
+        if suffixIcon is not None:
+            self._props["suffixIcon"] = suffixIcon
+        if superNextIcon is not None:
+            self._props["superNextIcon"] = superNextIcon
+        if superPrevIcon is not None:
+            self._props["superPrevIcon"] = superPrevIcon
+        if onOpenChange is not None:
+            self._props["onOpenChange"] = onOpenChange
+        if onPanelChange is not None:
+            self._props["onPanelChange"] = onPanelChange
+        if defaultPickerValue is not None:
+            self._props["defaultPickerValue"] = defaultPickerValue
+        if defaultValue is not None:
+            self._props["defaultValue"] = defaultValue
+        if disabledTime is not None:
+            self._props["disabledTime"] = disabledTime
+        if format is not None:
+            self._props["format"] = format
+        if renderExtraFooter is not None:
+            self._props["renderExtraFooter"] = renderExtraFooter
+        if showNow is not None:
+            self._props["showNow"] = showNow
+        if showTime is not None:
+            self._props["showTime"] = showTime
+        if showTimeDefaultValue is not None:
+            self._props["showTimedefaultValue"] = showTimeDefaultValue
+        if showToday is not None:
+            self._props["showToday"] = showToday
+        if onOk is not None:
+            self._props["onOk"] = onOk

@@ -50,58 +50,58 @@ class Tree(Element):
             ):
         super().__init__(component='Tree')
         self.children = content
-        self.props["allowDrop"] = allowDrop
-        self.props["autoExpandParent"] = autoExpandParent
-        self.props["blockNode"] = blockNode
-        self.props["checkable"] = checkable
-        self.props["checkedKeys"] = checkedKeys
-        self.props["checkStrictly"] = checkStrictly
-        self.props["defaultCheckedKeys"] = defaultCheckedKeys
-        self.props["defaultExpandAll"] = defaultExpandAll
-        self.props["defaultExpandedKeys"] = defaultExpandedKeys
-        self.props["defaultExpandParent"] = defaultExpandParent
-        self.props["defaultSelectedKeys"] = defaultSelectedKeys
-        self.props["disabled"] = disabled
-        self.props["draggable"] = draggable
-        self.props["expandedKeys"] = expandedKeys
-        self.props["fieldNames"] = fieldNames
-        self.props["filterTreeNode"] = filterTreeNode
-        self.props["height"] = height
-        self.props["icon"] = icon
-        self.props["loadData"] = loadData
-        self.props["loadedKeys"] = loadedKeys
-        self.props["multiple"] = multiple
-        self.props["rootStyle"] = rootStyle
-        self.props["selectable"] = selectable
-        self.props["selectedKeys"] = selectedKeys
-        self.props["showIcon"] = showIcon
-        self.props["showLine"] = showLine
-        self.props["switcherIcon"] = switcherIcon
-        self.props["titleRender"] = titleRender
-        self.props["treeData"] = treeData
-        self.props["virtual"] = virtual
+        self._props["allowDrop"] = allowDrop
+        self._props["autoExpandParent"] = autoExpandParent
+        self._props["blockNode"] = blockNode
+        self._props["checkable"] = checkable
+        self._props["checkedKeys"] = checkedKeys
+        self._props["checkStrictly"] = checkStrictly
+        self._props["defaultCheckedKeys"] = defaultCheckedKeys
+        self._props["defaultExpandAll"] = defaultExpandAll
+        self._props["defaultExpandedKeys"] = defaultExpandedKeys
+        self._props["defaultExpandParent"] = defaultExpandParent
+        self._props["defaultSelectedKeys"] = defaultSelectedKeys
+        self._props["disabled"] = disabled
+        self._props["draggable"] = draggable
+        self._props["expandedKeys"] = expandedKeys
+        self._props["fieldNames"] = fieldNames
+        self._props["filterTreeNode"] = filterTreeNode
+        self._props["height"] = height
+        self._props["icon"] = icon
+        self._props["loadData"] = loadData
+        self._props["loadedKeys"] = loadedKeys
+        self._props["multiple"] = multiple
+        self._props["rootStyle"] = rootStyle
+        self._props["selectable"] = selectable
+        self._props["selectedKeys"] = selectedKeys
+        self._props["showIcon"] = showIcon
+        self._props["showLine"] = showLine
+        self._props["switcherIcon"] = switcherIcon
+        self._props["titleRender"] = titleRender
+        self._props["treeData"] = treeData
+        self._props["virtual"] = virtual
         if not onCheck == None:
-            self.props["onCheck"] = onCheck
+            self._props["onCheck"] = onCheck
         if not onCheck == None:
-            self.props["onDragEnd"] = onDragEnd
+            self._props["onDragEnd"] = onDragEnd
         if not onCheck == None:
-            self.props["onDragEnter"] = onDragEnter
+            self._props["onDragEnter"] = onDragEnter
         if not onCheck == None:
-            self.props["onDragLeave"] = onDragLeave
+            self._props["onDragLeave"] = onDragLeave
         if not onCheck == None:
-            self.props["onDragOver"] = onDragOver
+            self._props["onDragOver"] = onDragOver
         if not onCheck == None:
-            self.props["onDragStart"] = onDragStart
+            self._props["onDragStart"] = onDragStart
         if not onCheck == None:
-            self.props["onDrop"] = onDrop
+            self._props["onDrop"] = onDrop
         if not onCheck == None:
-            self.props["onExpand"] = onExpand
+            self._props["onExpand"] = onExpand
         if not onCheck == None:
-            self.props["onLoad"] = onLoad
+            self._props["onLoad"] = onLoad
         if not onCheck == None:
-            self.props["onRightClick"] = onRightClick
+            self._props["onRightClick"] = onRightClick
         if not onCheck == None:
-            self.props["onSelect"] = onSelect
+            self._props["onSelect"] = onSelect
 
 class TreeNode(Element):
     def __init__(
@@ -118,14 +118,14 @@ class TreeNode(Element):
             ):
         super().__init__(component='TreeNode')
         self.content = content
-        self.props["checkable"] = checkable
-        self.props["disableCheckbox"] = disableCheckbox
-        self.props["disabled"] = disabled
-        self.props["icon"] = icon
-        self.props["isLeaf"] = isLeaf
-        self.props["key"] = key
-        self.props["selectable"] = selectable
-        self.props["title"] = title
+        self._props["checkable"] = checkable
+        self._props["disableCheckbox"] = disableCheckbox
+        self._props["disabled"] = disabled
+        self._props["icon"] = icon
+        self._props["isLeaf"] = isLeaf
+        self._props["key"] = key
+        self._props["selectable"] = selectable
+        self._props["title"] = title
 
 class DirectoryTree(Element):
     """
@@ -136,7 +136,7 @@ class DirectoryTree(Element):
     def __init__(self, content: List[Element] = None, expandAction= None):
         super().__init__(component='DirectoryTree')
         self.children = content
-        self.props["expandAction"] = expandAction
+        self._props["expandAction"] = expandAction
 
 
 

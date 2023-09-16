@@ -11,6 +11,6 @@ class Segmented(Element):
     ):
         super().__init__(component='Segmented')
         self.children = content
-        self.props["value"] = value
-        self.props["options"] = options
-        self.props["onChange"] = onChange
+        self._props["value"] = value
+        self._props["options"] = options
+        self._props["onChange"] = onChange

@@ -32,25 +32,47 @@ class Menu(Element):
     ):
         super().__init__(component='Menu')
         self.children = content
-        self.props["mode"] = mode
-        self.props["expandIcon"] = expandIcon
-        self.props["forceSubMenuRender"] = forceSubMenuRender
-        self.props["inlineCollapsed"] = inlineCollapsed
-        self.props["inlineIndent"] = inlineIndent
-        self.props["items"] = items
-        self.props["multiple"] = multiple
-        self.props["overflowedIndicator"] = overflowedIndicator
-        self.props["selectable"] = selectable
-        self.props["style"] = style
-        self.props["subMenuCloseDelay"] = subMenuCloseDelay
-        self.props["subMenuOpenDelay"] = subMenuOpenDelay
-        self.props["triggerSubMenuAction"] = triggerSubMenuAction
-        self.props["theme"] = theme
-        self.props["defaultSelectedKeys"] = defaultSelectedKeys
-        self.props["defaultOpenKeys"] = defaultOpenKeys
-        self.props["selectedKeys"] = selectedKeys
-        self.props["openKeys"] = openKeys
-        self.props["onSelect"] = onSelect
-        self.props["onOpenChange"] = onOpenChange
-        self.props["onClick"] = onClick
-        self.props["onDeselect"] =onDeselect 
+        if mode is not None:
+            self._props["mode"] = mode
+        if expandIcon is not None:
+            self._props["expandIcon"] = expandIcon
+        if forceSubMenuRender is not None:
+            self._props["forceSubMenuRender"] = forceSubMenuRender
+        if inlineCollapsed is not None:
+            self._props["inlineCollapsed"] = inlineCollapsed
+        if inlineIndent is not None:
+            self._props["inlineIndent"] = inlineIndent
+        if items is not None:
+            self._props["items"] = items
+        if multiple is not None:
+            self._props["multiple"] = multiple
+        if overflowedIndicator is not None:
+            self._props["overflowedIndicator"] = overflowedIndicator
+        if selectable is not None:
+            self._props["selectable"] = selectable
+        if style is not None:
+            self._props["style"] = style
+        if subMenuCloseDelay is not None:
+            self._props["subMenuCloseDelay"] = subMenuCloseDelay
+        if subMenuOpenDelay is not None:
+            self._props["subMenuOpenDelay"] = subMenuOpenDelay
+        if triggerSubMenuAction is not None:
+            self._props["triggerSubMenuAction"] = triggerSubMenuAction
+        if theme is not None:
+            self._props["theme"] = theme
+        if defaultSelectedKeys is not None:
+            self._props["defaultSelectedKeys"] = defaultSelectedKeys
+        if defaultOpenKeys is not None:
+            self._props["defaultOpenKeys"] = defaultOpenKeys
+        if selectedKeys is not None:
+            self._props["selectedKeys"] = selectedKeys
+        if openKeys is not None:
+            self._props["openKeys"] = openKeys
+        if onSelect is not None:
+            self._props["onSelect"] = onSelect
+        if onOpenChange is not None:
+            self._props["onOpenChange"] = onOpenChange
+        if onClick is not None:
+            self._props["onClick"] = onClick
+        if onDeselect is not None:
+            self._props["onDeselect"] =onDeselect 

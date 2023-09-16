@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Any, Awaitable, Callable, Dict, Iterator, List
 from fastapi import FastAPI
 from socketio import AsyncServer
 from uvicorn import Server
-
+from . import background_tasks
 update_component = []
 
 if TYPE_CHECKING:
@@ -72,10 +72,16 @@ def get_client() -> Client:
 
 
 @contextmanager
-def socket_id(id: str) -> Iterator[None]:
-    global _socket_id
-    _socket_id = id
+def socket_id(id_: str) -> Iterator[None]:
+    global _socket_id  # pylint: disable=global-statement
+    _socket_id = id_
     yield
     _socket_id = None
 
+
+def handle_exception(exception: Exception) -> None:
+    for handler in exception_handlers:
+        result = handler() if not inspect.signature(handler).parameters else handler(exception)
+        if isinstance(result, Awaitable):
+            background_tasks.create(result)
 

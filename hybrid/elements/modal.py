@@ -1,14 +1,16 @@
-from typing import List, Optional, Union, Callable
-from ..element import Element
-
+from typing import Any, List, Optional, Union, Callable, Dict
+from ..element import Element, JSONSerializable
+from ..interface import outbox
+from ..embedded_encoder import ElementJSONEncoder
+import json
 # Annahme: `Element` und andere Abhängigkeiten sind bereits definiert
 
-class Modal(Element):
+class Modal:
 
     def __init__(
         self,
         content= None,
-        title: Union[str, Element] = None,
+        title:Element = None,
         visible: bool = None,
         closable: bool = None,
         maskClosable: bool = None,
@@ -38,69 +40,13 @@ class Modal(Element):
         bodyStyle= None,
         afterClose= None,
         open= None
-    ):
-        super().__init__(component='Modal')
-        self.children=content
-        
-        if title is not None:
-            self._props["title"] = title
+        ):
+        self.as_dict()
 
-        if open is not None:
-            self._props["open"] = open
+    def as_dict(self) -> Dict[str, Any]:
+        return {x: self.__dict__[x] for x in self.__dict__ if self.__dict__[x] is not None}
 
-        if visible is not None:
-            self._props["visible"] = visible
-        if closable is not None:
-            self._props["closable"] = closable
-        if maskClosable is not None:
-            self._props["maskClosable"] = maskClosable
-        if width is not None:
-            self._props["width"] = width
-        if centered is not None:
-            self._props["centered"] = centered
-        if footer is not None:
-            self._props["footer"] = footer
-        if okText is not None:
-            self._props["okText"] = okText
-        if cancelText is not None:
-            self._props["cancelText"] = cancelText
-        if onOk is not None:
-            self._props["onOk"] = onOk
-        if onCancel is not None:
-            self._props["onCancel"] = onCancel
-        if afterOpenChange is not None:
-            self._props["afterOpenChange"] = afterOpenChange
-        if confirmLoading is not None:
-            self._props["confirmLoading"] = confirmLoading
-        if destroyOnClose is not None:
-            self._props["destroyOnClose"] = destroyOnClose
-        if mask is not None:
-            self._props["mask"] = mask
-        if keyboard is not None:
-            self._props["keyboard"] = keyboard
-        if maskStyle is not None:
-            self._props["maskStyle"] = maskStyle
-        if style is not None:
-            self._props["style"] = style
-        if wrapClassName is not None:
-            self._props["wrapClassName"] = wrapClassName
-        if zIndex is not None:
-            self._props["zIndex"] = zIndex
-        if okType is not None:
-            self._props["okType"] = okType
-        if okButtonProps is not None:
-            self._props["okButtonProps"] = okButtonProps
-        if modalRender is not None:
-            self._props["modalRender"] = modalRender
-        if getContainer is not None:
-            self._props["getContainer"] = getContainer
-        if focusTriggerAfterClose is not None:
-            self._props["focusTriggerAfterClose"] = focusTriggerAfterClose
-        if closeIcon is not None:
-            self._props["closeIcon"] = closeIcon
-        if cancelButtonProps is not None:
-            self._props["cancelButtonProps"] = cancelButtonProps
-        if bodyStyle is not None:
-            self._props["bodyStyle"] = bodyStyle
-        if afterClose is not None:
-            self._props["afterClose"] = afterClose
+    def __call__(self, *args: Any, **kwds: Any) -> Any:
+        initilmodal = self.as_dict()
+        elements = json.dumps(initilmodal, default=lambda o: o.__class__.__name__, indent=4)
+        return outbox('openmodal', data=elements)

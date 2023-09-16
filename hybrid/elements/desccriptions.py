@@ -40,13 +40,13 @@ class Descriptions(Element):
     ):
         super().__init__(component='Descriptions')
         self.children= content
-        self.props["title"] = title
-        self.props["bordered"] = bordered
-        self.props["colon"] = colon
-        self.props["column"] = column
-        self.props["contentStyle"] = contentStyle
-        self.props["extra"] = extra
-        self.props["items"] = items
-        self.props["labelStyle"] = labelStyle
-        self.props["layout"] = layout
-        self.props["size"] = size
+        self._props["title"] = title
+        self._props["bordered"] = bordered
+        self._props["colon"] = colon
+        self._props["column"] = column
+        self._props["contentStyle"] = contentStyle
+        self._props["extra"] = extra
+        self._props["items"] = items
+        self._props["labelStyle"] = labelStyle
+        self._props["layout"] = layout
+        self._props["size"] = size

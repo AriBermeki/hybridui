@@ -5,7 +5,7 @@ from ..element import Element
 
 class Space(Element):
     def __init__(self, content= None, align= None, direction= None, size= None, split= None, wrap= None):
-        super().__init__(component='UISpace')
+        super().__init__(component='Space')
         self.children = content
         if align is not None:
             self._props["align"] = align

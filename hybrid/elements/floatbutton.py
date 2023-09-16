@@ -21,26 +21,26 @@ class FloatButton(Element):
      
     ):
         super().__init__(component='FloatButton')
-        if not icon == None:
-            self.props["icon"] = icon
-        if not description == None:
-            self.props["description"] = description
-        if not tooltip == None:
-            self.props["tooltip"] = tooltip
-        if not type == None:
-            self.props["type"] = type
-        if not shape == None:
-            self.props["shape"] = shape
-        if not onClick == None:
-            self.props["onClick"] = onClick
-        if not href == None:
-            self.props["href"] = href
-        if not target == None:
-            self.props["target"] = target
-        if not badge == None:
-            self.props["badge"] = badge
-        if not size == None:
-            self.props["size"] = size
+        if icon is not None:
+            self._props["icon"] = icon
+        if description is not None:
+            self._props["description"] = description
+        if tooltip is not None:
+            self._props["tooltip"] = tooltip
+        if type is not None:
+            self._props["type"] = type
+        if shape is not None:
+            self._props["shape"] = shape
+        if onClick is not None:
+            self._props["onClick"] = onClick
+        if href is not None:
+            self._props["href"] = href
+        if target is not None:
+            self._props["target"] = target
+        if badge is not None:
+            self._props["badge"] = badge
+        if size is not None:
+            self._props["size"] = size
         self.children = content
 
 class FloatButtonGroup(Element):
@@ -57,8 +57,12 @@ class FloatButtonGroup(Element):
 
     ):
         super().__init__(component='FloatButtonGroup')
-        self.props["shape"] = shape
-        self.props["trigger"] = trigger
-        self.props["open"] = open
-        self.props["onOpenChange"] = onOpenChange
+        if shape is not None:    
+            self._props["shape"] = shape
+        if trigger is not None:    
+            self._props["trigger"] = trigger
+        if open is not None:    
+            self._props["open"] = open
+        if onOpenChange is not None:    
+            self._props["onOpenChange"] = onOpenChange
         self.children = content

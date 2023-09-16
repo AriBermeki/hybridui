@@ -35,30 +35,30 @@ class Transfer(Element):
     ):
         super().__init__(component='Transfer')
         self.children = content
-        self.props["dataSource"] = dataSource
-        self.props["disabled"] = disabled
-        self.props["selectionsIcon"] = selectionsIcon
-        self.props["filterOption"] = filterOption
-        self.props["footer"] = footer
-        self.props["listStyle"] = listStyle
-        self.props["locale"] = locale
-        self.props["oneWay"] = oneWay
-        self.props["operations"] = operations
-        self.props["operationStyle"] = operationStyle
-        self.props["pagination"] = pagination
-        self.props["render"] = render
-        self.props["selectAllLabels"] = selectAllLabels
-        self.props["selectedKeys"] = selectedKeys
-        self.props["showSearch"] = showSearch
-        self.props["showSelectAll"] = showSelectAll
-        self.props["status"] = status
-        self.props["targetKeys"] = targetKeys
-        self.props["titles"] = titles
+        self._props["dataSource"] = dataSource
+        self._props["disabled"] = disabled
+        self._props["selectionsIcon"] = selectionsIcon
+        self._props["filterOption"] = filterOption
+        self._props["footer"] = footer
+        self._props["listStyle"] = listStyle
+        self._props["locale"] = locale
+        self._props["oneWay"] = oneWay
+        self._props["operations"] = operations
+        self._props["operationStyle"] = operationStyle
+        self._props["pagination"] = pagination
+        self._props["render"] = render
+        self._props["selectAllLabels"] = selectAllLabels
+        self._props["selectedKeys"] = selectedKeys
+        self._props["showSearch"] = showSearch
+        self._props["showSelectAll"] = showSelectAll
+        self._props["status"] = status
+        self._props["targetKeys"] = targetKeys
+        self._props["titles"] = titles
         if not onChange == None:
-            self.props["onChange"] = onChange
+            self._props["onChange"] = onChange
         if not onScroll == None:
-            self.props["onScroll"] = onScroll
+            self._props["onScroll"] = onScroll
         if not onSearch == None:
-            self.props["onSearch"] = onSearch
+            self._props["onSearch"] = onSearch
         if not onSelectChange == None:
-            self.props["onSelectChange"] = onSelectChange
+            self._props["onSelectChange"] = onSelectChange

@@ -13,12 +13,12 @@ class Result(Element):
         title: Union[str, Element] = None,
         subTitle: Union[str, Element] = None,
         status: Literal["success", "error", "info", "warning", "404", "403", "500"] = "info"
-        # Add more props here if needed
+        # Add more _props here if needed
     ):
         super().__init__(component='Result')
         self.children = content
-        self.props["extra"] = extra
-        self.props["icon"] = icon
-        self.props["status"] = status
-        self.props["subTitle"] = subTitle
-        self.props["title"] = title
+        self._props["extra"] = extra
+        self._props["icon"] = icon
+        self._props["status"] = status
+        self._props["subTitle"] = subTitle
+        self._props["title"] = title

@@ -20,17 +20,17 @@ class Popconfirm(Element):
     ):
         super().__init__(component='Popconfirm')
 
-        self.props["cancelButtonProps"] = None
-        self.props["cancelText"] = cancelText
-        self.props["disabled"] = False
-        self.props["icon"] = icon
-        self.props["okButtonProps"] = None
-        self.props["okText"] = okText
-        self.props["okType"] = okType
-        self.props["showCancel"] = showCancel
-        self.props["title"] = title
-        self.props["description"] = description
-        self.props["onCancel"] = onCancel
-        self.props["onConfirm"] = onConfirm
-        self.props["onPopupClick"] = onPopupClick
+        self._props["cancelButtonProps"] = None
+        self._props["cancelText"] = cancelText
+        self._props["disabled"] = False
+        self._props["icon"] = icon
+        self._props["okButtonProps"] = None
+        self._props["okText"] = okText
+        self._props["okType"] = okType
+        self._props["showCancel"] = showCancel
+        self._props["title"] = title
+        self._props["description"] = description
+        self._props["onCancel"] = onCancel
+        self._props["onConfirm"] = onConfirm
+        self._props["onPopupClick"] = onPopupClick
         self.children = content

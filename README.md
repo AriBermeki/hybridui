@@ -116,7 +116,7 @@ if __name__ == '__main__':
  
    
 ```
-<img width="50%" src="./antdlogo.png">
+<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example.png?token=GHSAT0AAAAAACB7YTQISEN2ZMMLKTWEUH5AZIFUWNA">
 
 ```python
 from hybrid import interface
@@ -133,6 +133,8 @@ app.run()
  
    
 ```
+<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example1.png?token=GHSAT0AAAAAACB7YTQJY6EVAT2RZGQTG5CUZIFUXLQ">
+
 ```python
 from hybrid import interface
 
@@ -148,7 +150,32 @@ app.run()
  
    
 ```
+
+
+<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example2.png?token=GHSAT0AAAAAACB7YTQILUBDQ4WATNLWCYRQZIFUZAA">
+
+
+
 ```python
+from hybrid import interface
+
+# example with violinChart
+
+def main():
+  print('Hallo')
+
+
+layout = interface.violinChart()
+app = interface.compiler(layout=layout, globale_ui_style='main.css')
+app.run()
+ 
+   
+```
+<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example4.png?token=GHSAT0AAAAAACB7YTQIDUH4E5XQEIUUWISSZIFU3XA">
+
+
+```python
+
 from hybrid import interface
 
 # example with slider onchage

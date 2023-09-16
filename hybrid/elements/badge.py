@@ -62,11 +62,11 @@ class BadgeRibbon(Element):
         text: str = None,
     ):
         super().__init__(component='BadgeRibbon')
-        self.props["color"] = color
-        self.props["placement"] = placement
-        self.props["text"] = text
-        self.props["styles"] = None
-        self.props["classNames"] = None
-        self.props["root"] = None
-        self.props["indicator"] = None
+        self._props["color"] = color
+        self._props["placement"] = placement
+        self._props["text"] = text
+        self._props["styles"] = None
+        self._props["classNames"] = None
+        self._props["root"] = None
+        self._props["indicator"] = None
         self.content = content

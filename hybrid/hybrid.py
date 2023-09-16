@@ -34,7 +34,7 @@ from .core.event_core_ import EventListener
 from .embedded_encoder import ElementJSONEncoder
 import os
 from . import system_spezifisch
-from . import globals
+from . import globals, background_tasks
 import random
 import datetime
 import time
@@ -139,7 +139,7 @@ class UI(SyntheiticEvent):
             socket_io_js_extra_headers: Dict = {}
             socket_io_js_transports: List[Literal['websocket', 'polling']] = ['websocket', 'polling']
             client_id = str(1)     
-            initial_app_layout = Element(component="Layout", children=[layout])
+            initial_app_layout = Element(component="div", children=[layout])
             elements = json.dumps(initial_app_layout, default=lambda o: o.as_dict() if isinstance(o, JSONSerializable)  else None, indent=4, cls=ElementJSONEncoder)
             data = {
                 'query': client_id,
@@ -163,6 +163,15 @@ class UI(SyntheiticEvent):
         def check_update(request: Request, status_code: int = 200)-> Response:
             
             return {"componentKey": globals.update_component}
+        
+
+
+        @self.app.on_event('startup')
+        def handle_startup(with_welcome_message: bool = True) -> None:
+            globals.state = globals.State.STARTING
+            globals.loop = asyncio.get_running_loop()
+            background_tasks.create(system_spezifisch.loop())
+            globals.state = globals.State.STARTED
 
     
         @self.sio.on("browserconct")

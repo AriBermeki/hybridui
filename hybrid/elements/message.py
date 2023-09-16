@@ -20,12 +20,12 @@ class Message(Element):
     ):
         super().__init__(component='Message')
         self.children = content
-        self.props["type"] = type
-        self.props["duration"] = duration
-        self.props["afterClose"] = afterClose
-        self.props["className"] = className
-        self.props["icon"] = icon
-        self.props["key"] = key
-        self.props["style"] = style
-        self.props["onClick"] = onClick
-        self.props["onClose"] = onClose
+        self._props["type"] = type
+        self._props["duration"] = duration
+        self._props["afterClose"] = afterClose
+        self._props["className"] = className
+        self._props["icon"] = icon
+        self._props["key"] = key
+        self._props["style"] = style
+        self._props["onClick"] = onClick
+        self._props["onClose"] = onClose

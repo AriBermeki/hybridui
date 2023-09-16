@@ -5,7 +5,7 @@ from ..element import Element
 
 class Tour(Element):
     """
-            self.props["TourStep"] = {
+            self._props["TourStep"] = {
             "target": None,
             "arrow": None,
             "cover": None,
@@ -42,19 +42,19 @@ class Tour(Element):
     ):
         super().__init__(component='Tour')
         self.children=content
-        self.props["steps"] = steps
-        self.props["initialStep"] = initialStep
-        self.props["arrow"] = arrow
-        self.props["placement"] = placement
+        self._props["steps"] = steps
+        self._props["initialStep"] = initialStep
+        self._props["arrow"] = arrow
+        self._props["placement"] = placement
         if not onClose == None:
-            self.props["onClose"] = onClose
-        self.props["mask"] = mask
-        self.props["type"] = type
-        self.props["open"] = open
+            self._props["onClose"] = onClose
+        self._props["mask"] = mask
+        self._props["type"] = type
+        self._props["open"] = open
         if not onChange == None:
-            self.props["onChange"] = onChange
-        self.props["current"] = current
-        self.props["scrollIntoViewOptions"] = scrollIntoViewOptions
-        self.props["indicatorsRender"] = indicatorsRender
-        self.props["zIndex"] = zIndex
+            self._props["onChange"] = onChange
+        self._props["current"] = current
+        self._props["scrollIntoViewOptions"] = scrollIntoViewOptions
+        self._props["indicatorsRender"] = indicatorsRender
+        self._props["zIndex"] = zIndex
 

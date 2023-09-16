@@ -12,5 +12,5 @@ class Navigation(Element):
         theme: Literal["light", "dark"] = "light",
     ):
         super().__init__(component='Navigation')
-        self.props["mode"] = mode
-        self.props["theme"] = theme
+        self._props["mode"] = mode
+        self._props["theme"] = theme

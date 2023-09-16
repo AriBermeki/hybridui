@@ -13,7 +13,7 @@ class Empty(Element):
     
     ):
         super().__init__(component='Empty')
-        self.props["description"] = description
-        self.props["image"] = image
-        self.props["imageStyle"] = None
+        self._props["description"] = description
+        self._props["image"] = image
+        self._props["imageStyle"] = None
         self.children = content

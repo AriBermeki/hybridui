@@ -5,13 +5,13 @@ with open("./README.md", "r", encoding='utf-8') as fh:
 
 setuptools.setup(
     name="HybridUI", 
-    version="0.0.8",
+    version="0.0.1",
     author="Ari Bermeki",
     author_email="ari.bermeki.de@gmail.com",
     description="Create an efficient and enjoyable work experience with pure Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AriBermeki/foundation",
+    url="https://github.com/AriBermeki/hybridui",
     packages=setuptools.find_packages(),
     package_data={
         "hybrid": ["charts/*", "core/*", "elements/*", "eventarguments/*", "libary_images/*", "static/**","templates/*"]
@@ -23,19 +23,19 @@ setuptools.setup(
         'uvicorn[standard]',
         'psutil', 
         'python-dateutil', 
+        'python-multipart',
+        'jinja2',
+        'aiofiles',
+        'starlette'
     ],
     include_package_data=False,
     extras_require={
         "full": [
-            "aiofiles",
             "graphene",
             "itsdangerous",
-             'jinja2',
-            "python-multipart",
             "pyyaml",
             "requests",
             "orjson",
-            "starlette"
         ]
     },
     classifiers=[

@@ -20,7 +20,7 @@ class JSONSerializable(Protocol):
         ...
 
 
-class Element(JSONSerializable, SyntheiticEvent):
+class Element(SyntheiticEvent):
     def __init__(self, component: str, children=None, update_client:bool = None):
         self.key = str(uuid.uuid4())
         self.component: str = component
@@ -31,8 +31,7 @@ class Element(JSONSerializable, SyntheiticEvent):
         if update_client == True:
             globals.update_component.append[self.key]
 
-    def update(self, **element: 'Element'):
-        return element.update()
+    
 
     def __enter__(self):
         return self
@@ -41,12 +40,16 @@ class Element(JSONSerializable, SyntheiticEvent):
         pass
 
     def as_dict(self) -> Dict[str, Any]:
-        return {
+        child = {x: self.__dict__[x] for x in self.__dict__ if self.__dict__[x] is not None}
+        data = {
             "key":self.key,
             "component": self.component,
             "props": self._props,
-            "children": [child.as_dict() if isinstance(child, JSONSerializable) else child for child in self.children]
+            "children": [child.as_dict() if isinstance(child, Element) else child for child in self.children]
         }
+        #[child.as_dict() if isinstance(child, Element) else child for child in self.children]
+        #py = json.dumps(data, default=lambda o: o.as_dict() if isinstance(o, JSONSerializable)  else None, indent=4, cls=ElementJSONEncoder)
+        return data
     
     @staticmethod
     def _parse_props(name: Optional[str]) -> Dict[str, Any]:

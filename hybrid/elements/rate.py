@@ -26,20 +26,20 @@ class Rate(Element):
     ):
         super().__init__(component='Rate')
 
-        self.props["allowClear"] = allowClear
-        self.props["allowHalf"] = allowHalf
-        self.props["autoFocus"] = autoFocus
-        self.props["character"] = character
-        self.props["className"] = className
-        self.props["count"] = count
-        self.props["defaultValue"] = defaultValue
-        self.props["disabled"] = disabled
-        self.props["style"] = style
-        self.props["tooltips"] = tooltips
-        self.props["value"] = value
-        self.props["onBlur"] = onBlur
-        self.props["onChange"] = onChange
-        self.props["onFocus"] = onFocus
-        self.props["onHoverChange"] = onHoverChange
-        self.props["onKeyDown"] = onKeyDown
+        self._props["allowClear"] = allowClear
+        self._props["allowHalf"] = allowHalf
+        self._props["autoFocus"] = autoFocus
+        self._props["character"] = character
+        self._props["className"] = className
+        self._props["count"] = count
+        self._props["defaultValue"] = defaultValue
+        self._props["disabled"] = disabled
+        self._props["style"] = style
+        self._props["tooltips"] = tooltips
+        self._props["value"] = value
+        self._props["onBlur"] = onBlur
+        self._props["onChange"] = onChange
+        self._props["onFocus"] = onFocus
+        self._props["onHoverChange"] = onHoverChange
+        self._props["onKeyDown"] = onKeyDown
         self.children = content

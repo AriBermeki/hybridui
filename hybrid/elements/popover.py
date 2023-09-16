@@ -20,8 +20,8 @@ class Popover(Element):
         super().__init__(component='Popover')
 
         self.children = content
-        self.props["title"] = title
-        self.props["trigger"] = trigger
-        self.props["placement"] = placement
-        self.props["arrowPointAtCenter"] = arrowPointAtCenter
-        self.props["visible"] = visible
+        self._props["title"] = title
+        self._props["trigger"] = trigger
+        self._props["placement"] = placement
+        self._props["arrowPointAtCenter"] = arrowPointAtCenter
+        self._props["visible"] = visible
