@@ -113,10 +113,11 @@ if __name__ == '__main__':
 
     app = interface.compiler(layout=content,globale_ui_style='main.css')
     app.run()
+https://raw.githubusercontent.com/AriBermeki/logo/main/example.png?token=GHSAT0AAAAAACB7YTQIDVBF7EWCQPQHHWQOZIFVBVQ
  
    
 ```
-<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example.png?token=GHSAT0AAAAAACB7YTQISEN2ZMMLKTWEUH5AZIFUWNA">
+<img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example.png?token=GHSAT0AAAAAACB7YTQIDVBF7EWCQPQHHWQOZIFVBVQ">
 
 ```python
 from hybrid import interface
@@ -130,7 +131,7 @@ def main():
 layout = interface.button(text='Click', onclick=main)
 app = interface.compiler(layout=layout, globale_ui_style='main.css')
 app.run()
- https://raw.githubusercontent.com/AriBermeki/logo/main/example1.png?token=GHSAT0AAAAAACB7YTQISC5NXX4333R4YMZIZIFVAFA
+
    
 ```
 <img width="50%" src="https://raw.githubusercontent.com/AriBermeki/logo/main/example1.png?token=GHSAT0AAAAAACB7YTQISC5NXX4333R4YMZIZIFVAFA">
