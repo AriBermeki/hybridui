@@ -26,7 +26,7 @@ jobs:
         python setup.py sdist bdist_wheel 
         twine upload dist/*
       env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAM }}
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}  # Set the PyPI API token
         
     - name: Publish package
