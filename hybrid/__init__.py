@@ -1,6 +1,10 @@
-import importlib.metadata
+from importlib_metadata import version
+from pathlib import Path
 
-__version__ = "0.0.1" 
+project_root = Path(__file__).parent
+
+__version__ = version(__package__)
+
 
 from . import elements, globals, interface
 
